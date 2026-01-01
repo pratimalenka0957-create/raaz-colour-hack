@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raaz Colour Hack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff69b4, #87ceeb);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffd700;
+        }
+        .app-section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+        button {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        button:hover {
+            background: #ff69b4;
+        }
+        input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+            width: 80%;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌈 Welcome to Raaz Colour Hack 🌈</h1>
+    <p>All Color Trading Prediction Apps in one place.<br>
+    Full access only ₹499</p>
+
+    <div class="app-section">
+        <h2>Wingo Mod v4.9</h2>
+        <p>Fast & smart color prediction</p>
+        <button onclick="predictColor()">Predict Now</button>
+        <p id="result1"></p>
+    </div>
+
+    <div class="app-section">
+        <h2>Max Mod v4.9</h2>
+        <p>Trend based prediction system</p>
+        <button onclick="trendPredict()">Get Trend</button>
+        <p id="result2"></p>
+    </div>
+
+    <div class="app-section">
+        <h2>Fire Mod v4.9</h2>
+        <p>Lucky number color match</p>
+        <input type="number" id="luckyNum" placeholder="Enter lucky number">
+        <br><br>
+        <button onclick="luckyPredict()">Check Color</button>
+        <p id="result3"></p>
+    </div>
+
+    <div class="app-section">
+        <h2>Buy Full Access</h2>
+        <p>Unlock all premium predictions</p>
+        <button onclick="alert('Payment system coming soon!')">Buy for ₹499</button>
+    </div>
+
+    <footer>
+        <p>📧 Contact: hackinghacker172727@gmail.com</p>
+        <p>⚠️ This website is for educational & demo purposes only.</p>
+    </footer>
+
+    <script>
+        function predictColor() {
+            const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('result1').textContent = "Predicted Color: " + randomColor;
+        }
+
+        function trendPredict() {
+            const trends = [
+                'Red (High Chance)',
+                'Green (Lucky Today)',
+                'Blue (Stable)',
+                'Purple (Risky)'
+            ];
+            const randomTrend = trends[Math.floor(Math.random() * trends.length)];
+            document.getElementById('result2').textContent = "Trend: " + randomTrend;
+        }
+
+        function luckyPredict() {
+            const num = document.getElementById('luckyNum').value;
+            if (num === "") {
+                document.getElementById('result3').textContent = "Please enter a number!";
+                return;
+            }
+            const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple'];
+            const color = colors[num % 5];
+            document.getElementById('result3').textContent = "Your Lucky Color: " + color;
+        }
+    </script>
+
+</body>
+</html>
